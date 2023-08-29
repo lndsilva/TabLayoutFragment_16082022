@@ -10,23 +10,21 @@ public class MyViewPagerAdapter extends FragmentStateAdapter {
     public MyViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }
-
     @NonNull
     @Override
     public Fragment createFragment(int position) {
         switch (position){
             case 0:
-                return new HomeFragment();
+                return new CachorroFragment();
             case 1:
-                return new NotificationsFragment();
+                return new PassarosFragment();
             case 2:
                 return new SettingsFragment();
             default:
-                return new HomeFragment();
+                return new CachorroFragment();
         }
 
     }
-
     @Override
     public int getItemCount() {
         return 3;
